@@ -9,6 +9,25 @@
 - Flask-SQLAlchemy
 - Flask-Migrate
 - python-dotenv
+- pylint
+- pylint-flask
+- pylint-flask-sqlalchemy
+
+## Configuration
+
+### Visual Studio Code
+
+#### `.vscode/settings.json`
+
+```json
+{
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint-flask",
+        "pylint-flask-sqlalchemy"
+    ]
+}
+```
 
 ## Running
 
