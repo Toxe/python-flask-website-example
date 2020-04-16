@@ -8,3 +8,17 @@ class User(db.Model):
 
     def __repr__(self):
         return "<User {}>".format(self.username)
+
+
+class Ship(db.Model):
+    id           = db.Column(db.Integer, primary_key=True)
+    length       = db.Column(db.Integer)
+    crew         = db.Column(db.Integer)
+    affiliation  = db.Column(db.String(100))
+    category     = db.Column(db.String(100))
+    manufacturer = db.Column(db.String(100))
+    model        = db.Column(db.String(100))
+    ship_class   = db.Column(db.String(100))
+
+    def __repr__(self):
+        return "<Ship {}>".format(self.model)
