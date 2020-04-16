@@ -6,6 +6,7 @@
 - SQLAlchemy
 - SQLite
 - Flask
+- Flask-WTF
 - Flask-SQLAlchemy
 - Flask-Migrate
 - python-dotenv
