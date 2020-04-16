@@ -19,6 +19,16 @@ class Ship(db.Model):
     manufacturer = db.Column(db.String(100))
     model        = db.Column(db.String(100))
     ship_class   = db.Column(db.String(100))
+    roles        = db.relationship("ShipRole", backref="ship", lazy="dynamic")
 
     def __repr__(self):
         return "<Ship {}>".format(self.model)
+
+
+class ShipRole(db.Model):
+    id      = db.Column(db.Integer, primary_key=True)
+    ship_id = db.Column(db.Integer, db.ForeignKey("ship.id"))
+    role    = db.Column(db.String(100))
+
+    def __repr__(self):
+        return "<ShipRole {}>".format(self.role)
