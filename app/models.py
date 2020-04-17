@@ -32,6 +32,16 @@ class User(UserMixin, db.Model):
         return "https://www.gravatar.com/avatar/{}?d=identicon&s={}".format(digest, size)
 
 
+class Post(db.Model):
+    id        = db.Column(db.Integer, primary_key=True)
+    body      = db.Column(db.String(140))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    user_id   = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+    def __repr__(self):
+        return "<Post {}>".format(self.body)
+
+
 class Ship(db.Model):
     id           = db.Column(db.Integer, primary_key=True)
     length       = db.Column(db.Integer)
