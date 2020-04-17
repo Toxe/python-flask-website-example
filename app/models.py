@@ -1,7 +1,9 @@
-from app import db, login
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from datetime import datetime
 from hashlib import md5
+from app import db, login
+from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 @login.user_loader
 def load_user(id):
@@ -9,10 +11,12 @@ def load_user(id):
 
 
 class User(UserMixin, db.Model):
-    id       = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), index=True, unique=True)
-    email    = db.Column(db.String(100), index=True, unique=True)
-    password = db.Column(db.String(128))
+    id        = db.Column(db.Integer, primary_key=True)
+    username  = db.Column(db.String(64), index=True, unique=True)
+    email     = db.Column(db.String(100), index=True, unique=True)
+    password  = db.Column(db.String(128))
+    about_me  = db.Column(db.String(140))
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
         return "<User {}>".format(self.username)
