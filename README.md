@@ -31,6 +31,12 @@
 }
 ```
 
+## Import ships example data
+
+```
+sqlite3 app.db < ships.sql
+```
+
 ## Running
 
 ```
