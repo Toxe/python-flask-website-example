@@ -10,6 +10,7 @@
 - Flask-SQLAlchemy
 - Flask-Migrate
 - Flask-Login
+- Flask-RESTful
 - python-dotenv
 - pylint
 - pylint-flask
