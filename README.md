@@ -9,6 +9,7 @@
 - Flask-WTF
 - Flask-SQLAlchemy
 - Flask-Migrate
+- Flask-Login
 - python-dotenv
 - pylint
 - pylint-flask
