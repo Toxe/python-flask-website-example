@@ -12,6 +12,7 @@
 - Flask-Login
 - Flask-Mail
 - Flask-Bootstrap
+- Flask-Moment
 - PyJWT
 - python-dotenv
 - pylint
