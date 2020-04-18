@@ -11,6 +11,7 @@
 - Flask-Migrate
 - Flask-Login
 - Flask-Mail
+- Flask-Bootstrap
 - PyJWT
 - python-dotenv
 - pylint
