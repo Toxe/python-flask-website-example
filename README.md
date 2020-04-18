@@ -10,6 +10,8 @@
 - Flask-SQLAlchemy
 - Flask-Migrate
 - Flask-Login
+- Flask-Mail
+- PyJWT
 - python-dotenv
 - pylint
 - pylint-flask
