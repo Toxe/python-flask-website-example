@@ -19,6 +19,7 @@
 - pylint
 - pylint-flask
 - pylint-flask-sqlalchemy
+- Click
 
 ## Configuration
 
@@ -46,4 +47,26 @@ sqlite3 app.db < ships.sql
 
 ```
 flask run
+```
+
+## Translation
+
+### Add a new language
+
+For example add support for German (`de`):
+
+```
+flask translate init de
+```
+
+### Update all languages
+
+```
+flask translate update
+```
+
+### Compile translation files
+
+```
+flask translate compile
 ```
