@@ -13,6 +13,7 @@
 - Flask-Mail
 - Flask-Bootstrap
 - Flask-Moment
+- Flask-Babel
 - PyJWT
 - python-dotenv
 - pylint

@@ -1,6 +1,7 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
+from flask_babel import _
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User, Post
@@ -24,7 +25,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash("Your post is now live!")
+        flash(_("Your post is now live!"))
         return redirect(url_for("index"))
     page = request.args.get("page", 1, type=int)
     posts = current_user.followed_posts().paginate(page, app.config["POSTS_PER_PAGE"], False)
@@ -127,7 +128,7 @@ def edit_profile():
 def follow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash("User {} not found.".format(username))
+        flash(_("User %{username}s not found.", username=username))
         return redirect(url_for("index"))
     if user == current_user:
         flash("You cannot follow yourself!")
