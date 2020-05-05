@@ -20,6 +20,8 @@
 - pylint-flask
 - pylint-flask-sqlalchemy
 - Click
+- Requests
+- guess_language-spirit
 
 ## Configuration
 
