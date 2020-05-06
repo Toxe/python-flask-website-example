@@ -14,6 +14,7 @@
 - Flask-Bootstrap
 - Flask-Moment
 - Flask-Babel
+- Flask-HTTPAuth
 - PyJWT
 - python-dotenv
 - pylint
