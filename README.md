@@ -1,8 +1,10 @@
-# Flask SQLAlchemy
+# Flask Website Example/Test
+
+A simple Flask website example/test based mostly on [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) by Miguel Grinberg.
 
 ## Dependencies
 
-- Python 3.8
+- Python 3
 - SQLAlchemy
 - SQLite
 - Flask
